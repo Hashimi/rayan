@@ -205,15 +205,15 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 .hero-overlay{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;background:rgba(0,0,0,0.35);}
 
 
-/* HERO LOGO - Base (Desktop) */
 .hero-logo {
-  width: 480px;
-  max-width: 90%; /* Prevents overflow on small viewports */
+  width: clamp(180px, 45vw, 480px); /* Min, Preferred, Max */
+  max-width: 90%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: clamp(12px, 3vw, 20px);
   filter: drop-shadow(0 5px 20px rgba(0,0,0,0.6));
   transition: transform 0.3s;
 }
+
 
 /* Tablet & Small Desktop (max-width: 900px) */
 @media (max-width: 900px) {
