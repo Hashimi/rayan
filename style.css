@@ -233,9 +233,9 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 /* Hero Title - remove ALL margins and reduce line-height */
 .hero-title{
   font-size:60px;
-  margin: 0;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
-  margin-top: 0;      /* ✅ ADD THIS - overrides default h1 margin */
-  padding: 0;         /* ✅ ADD THIS */
+  margin: 5;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
+  margin-top: 5;      /* ✅ ADD THIS - overrides default h1 margin */
+  padding: 5;         /* ✅ ADD THIS */
   line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
   font-weight:bold;
   color:#ffd966;
@@ -407,6 +407,7 @@ form input, form textarea, form button{width:100%;}
 .hero-subtitle{font-size:14px;}
 
 }
+
 
 
 
