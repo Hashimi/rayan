@@ -312,10 +312,38 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 }
 
 /* ABOUT SECTION */
-.about-section{position:relative;padding:120px 10%;background:linear-gradient(135deg,#2a2a2a,#1f1f1f);}
+/* ABOUT SECTION */
+.about-section{
+  position:relative;
+  padding:120px 10%;
+  background:linear-gradient(135deg,#2a2a2a,#1f1f1f);
+}
 
-.about-ribbon{position:absolute;top:20px;left:50%;transform:translateX(-50%);background:#ffd966;padding:10px 25px;border-radius:30px;box-shadow:0 5px 15px rgba(0,0,0,0.5);font-weight:bold;color:#222;font-size:16px;text-transform:uppercase;animation: ribbonSlide 2s ease forwards;z-index:10;}
-@keyframes ribbonSlide{0%{transform:translateX(-50%) translateY(-50px);opacity:0;}100%{transform:translateX(-50%) translateY(0);opacity:1;}}
+/* ABOUT RIBBON - Changed from absolute to relative */
+.about-ribbon{
+  position:relative;  /* ✅ CHANGED from absolute */
+  top: auto;          /* ✅ CHANGED from 20px */
+  left: auto;         /* ✅ CHANGED from 50% */
+  transform: none;    /* ✅ CHANGED from translateX(-50%) */
+  background:#ffd966;
+  padding:10px 25px;
+  border-radius:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.5);
+  font-weight:bold;
+  color:#222;
+  font-size:16px;
+  text-transform:uppercase;
+  animation: ribbonSlide 2s ease forwards;
+  z-index:10;
+  display: inline-block;  /* ✅ ADD THIS */
+  margin-bottom: 30px;    /* ✅ ADD THIS - space below ribbon */
+}
+
+@keyframes ribbonSlide{
+  0%{transform: translateY(-50px);opacity:0;}
+  100%{transform: translateY(0);opacity:1;}
+}
+
 
 .about-container{max-width:1200px;margin:auto;}
 .about-content{display:flex;align-items:center;justify-content:space-between;gap:50px;flex-wrap:wrap;}
@@ -400,6 +428,7 @@ form input, form textarea, form button{width:100%;}
 .hero-subtitle{font-size:14px;}
 
 }
+
 
 
 
