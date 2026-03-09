@@ -13,20 +13,26 @@
 <body>
 
 <header>
-
-
-<nav class="navbar">
-<div class="logo">
-<img src="logo.png">
-<span class="logo-text lang" data-fa="رایان تاور" data-en="Rayan Tower">رایان تاور</span>
 <nav class="navbar">
 
+
+<!-- Inside <nav class="navbar">, after the logo div -->
 <div class="logo">
-<img src="logo.png">
-<span class="logo-text lang" data-fa="رایان تاور" data-en="Rayan Tower">رایان تاور</span>
+  <img src="logo.png" alt="Logo">
+  <span class="logo-text lang" data-fa="رایان تاور" data-en="Rayan Tower">رایان تاور</span>
 </div>
 
-<div class="menu-toggle"> ☰ </div>
+<!-- ADD THIS HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<ul class="nav-links" id="navLinks">
+  <!-- existing links -->
+</ul>
+
 
 <ul class="nav-links">
 
