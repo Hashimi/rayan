@@ -230,22 +230,10 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   transition:transform 0.3s;
 }
 
-/* Hero Title - remove ALL margins and reduce line-height */
-.hero-title{
-  font-size:60px;
-  margin: 5;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
-  margin-top: 5;      /* ✅ ADD THIS - overrides default h1 margin */
-  padding: 5;         /* ✅ ADD THIS */
-  line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
-  font-weight:bold;
-  color:#ffd966;
-}
-
+.hero-title{font-size:60px;margin-bottom:10px;font-weight:bold;color:#ffd966;}
 .hero-subtitle{font-size:20px;margin-bottom:15px;color:#fff;}
 .btn{background:#ffd966;color:#222;padding:12px 25px;text-decoration:none;border-radius:30px;transition:0.3s;font-weight:bold;}
 .btn:hover{background:#e6c84d;}
-
-
 
 * Tablet (≤900px) */
 @media (max-width: 900px) {
@@ -407,6 +395,7 @@ form input, form textarea, form button{width:100%;}
 .hero-subtitle{font-size:14px;}
 
 }
+
 
 
 
