@@ -221,7 +221,7 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 
 /* Hero Logo - reduce margin and ensure no padding */
 .hero-logo{
-  width:420px;
+  width:480px;
   margin-bottom:5px;  /* ✅ Reduced from 10px to 5px */
   margin-top: 0;      /* ✅ ADD THIS */
   padding: 0;         /* ✅ ADD THIS */
@@ -411,3 +411,4 @@ form input, form textarea, form button{width:100%;}
 .hero-subtitle{font-size:14px;}
 
 }
+
