@@ -203,25 +203,67 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 /* HERO */
 .hero{height:100vh;position:relative;overflow:hidden;}
 #heroVideo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;background:rgba(0,0,0,0.35);}
-.hero-logo{width:350px;margin-bottom:20px;filter:drop-shadow(0 5px 20px rgba(0,0,0,0.6));transition:transform 0.3s;}
-.hero-title{font-size:60px;margin-bottom:10px;font-weight:bold;color:#ffd966;}
+
+/* HERO Overlay - remove any flex gap */
+.hero-overlay{
+  position:relative;
+  z-index:1;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  background:rgba(0,0,0,0.35);
+  gap: 0;  /* ✅ ADD THIS - ensures no flex gap */
+}
+
+/* Hero Logo - reduce margin and ensure no padding */
+.hero-logo{
+  width:480px;
+  margin-bottom:5px;  /* ✅ Reduced from 10px to 5px */
+  margin-top: 0;      /* ✅ ADD THIS */
+  padding: 0;         /* ✅ ADD THIS */
+  display: block;     /* ✅ ADD THIS - removes inline spacing */
+  filter:drop-shadow(0 5px 20px rgba(0,0,0,0.6));
+  transition:transform 0.3s;
+}
+
+/* Hero Title - remove ALL margins and reduce line-height */
+.hero-title{
+  font-size:60px;
+  margin: 0;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
+  margin-top: 0;      /* ✅ ADD THIS - overrides default h1 margin */
+  padding: 0;         /* ✅ ADD THIS */
+  line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
+  font-weight:bold;
+  color:#ffd966;
+}
+
 .hero-subtitle{font-size:20px;margin-bottom:15px;color:#fff;}
 .btn{background:#ffd966;color:#222;padding:12px 25px;text-decoration:none;border-radius:30px;transition:0.3s;font-weight:bold;}
 .btn:hover{background:#e6c84d;}
 
 
 
-/* Tablet & Small Desktop (max-width: 900px) */
+* Tablet (≤900px) */
 @media (max-width: 900px) {
   .hero-logo {
-    width: 300px; /* Was 120px — now much more visible */
-    margin-bottom: 15px;
+    width: 300px;
+    margin-bottom: 5px;  /* ✅ Reduced */
+    margin-top: 0;
+    display: block;
   }
   
   .hero-title {
-    font-size: 42px; /* Slightly reduced for balance */
+    font-size: 42px;
+    margin: 0;           /* ✅ CHANGED */
+    margin-top: 0;
+    line-height: 1.1;    /* ✅ ADD THIS */
   }
+}
+
   
   .hero-subtitle {
     font-size: 18px;
@@ -229,17 +271,24 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   }
 }
 
-/* Mobile Phones (max-width: 500px) */
+/* Phone (≤500px) */
 @media (max-width: 500px) {
   .hero-logo {
-    width: 220px; /* Was 100px — now clearly readable */
-    margin-bottom: 12px;
+    width: 220px;
+    margin-bottom: 3px;  /* ✅ Reduced further for mobile */
+    margin-top: 0;
+    display: block;
   }
   
   .hero-title {
     font-size: 32px;
+    margin: 0;           /* ✅ CHANGED */
+    margin-top: 0;
+    line-height: 1.1;    /* ✅ ADD THIS */
   }
-  
+}
+
+ 
   .hero-subtitle {
     font-size: 15px;
     padding: 0 15px;
@@ -251,20 +300,31 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   }
 }
 
-/* Extra Small Phones (max-width: 360px) */
+/* Small Phone (≤360px) */
 @media (max-width: 360px) {
   .hero-logo {
-    width: 180px; /* Minimum readable size */
+    width: 180px;
+    margin-bottom: 3px;  /* ✅ Reduced */
+    margin-top: 0;
+    display: block;
   }
   
   .hero-title {
     font-size: 28px;
+    margin: 0;           /* ✅ CHANGED */
+    margin-top: 0;
+    line-height: 1.1;    /* ✅ ADD THIS */
   }
+}
+
   
   .hero-subtitle {
     font-size: 14px;
   }
 }
+
+
+
 
 
 /* ABOUT SECTION */
@@ -328,7 +388,7 @@ footer{text-align:center;padding:20px;background:#222;color:white;}
 
 /* RESPONSIVE */
 
-@media(max-width:900px){  
+@media(max-width:900px){
 /* .nav-links{flex-direction:column;gap:15px;margin-top:10px;} */
 
 .about-content{flex-direction:column-reverse;gap:30px;}
@@ -339,16 +399,14 @@ footer{text-align:center;padding:20px;background:#222;color:white;}
 .gallery{grid-template-columns:repeat(2,1fr);gap:20px;}
 .hero h1{font-size:36px;}
 .hero p{font-size:16px;}
-.hero-logo{width:120px;}
+/* ✅ REMOVED: .hero-logo{width:120px;} */
 .commercial-features, .residential-features, .features-grid{flex-direction:column;gap:20px;}
 }
 @media(max-width:500px){
 .gallery{grid-template-columns:1fr;gap:15px;}
 #location iframe{height:250px;}
 form input, form textarea, form button{width:100%;}
-.hero-logo{width:100px;}
+/* ✅ REMOVED: .hero-logo{width:100px;} */
 .hero-title{font-size:28px;}
 .hero-subtitle{font-size:14px;}
 }
-
-
