@@ -230,10 +230,22 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   transition:transform 0.3s;
 }
 
-.hero-title{font-size:60px;margin-bottom:10px;font-weight:bold;color:#ffd966;}
+/* Hero Title - remove ALL margins and reduce line-height */
+.hero-title{
+  font-size:60px;
+  margin: 0;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
+  margin-top: 0;      /* ✅ ADD THIS - overrides default h1 margin */
+  padding: 0;         /* ✅ ADD THIS */
+  line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
+  font-weight:bold;
+  color:#ffd966;
+}
+
 .hero-subtitle{font-size:20px;margin-bottom:15px;color:#fff;}
 .btn{background:#ffd966;color:#222;padding:12px 25px;text-decoration:none;border-radius:30px;transition:0.3s;font-weight:bold;}
 .btn:hover{background:#e6c84d;}
+
+
 
 * Tablet (≤900px) */
 @media (max-width: 900px) {
@@ -311,7 +323,10 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   }
 }
 
-/* ABOUT SECTION */
+
+
+
+
 /* ABOUT SECTION */
 .about-section{
   position:relative;
@@ -319,12 +334,9 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   background:linear-gradient(135deg,#2a2a2a,#1f1f1f);
 }
 
-/* ABOUT RIBBON - Changed from absolute to relative */
+/* ABOUT RIBBON - Centered regardless of language */
 .about-ribbon{
-  position:relative;  /* ✅ CHANGED from absolute */
-  top: auto;          /* ✅ CHANGED from 20px */
-  left: auto;         /* ✅ CHANGED from 50% */
-  transform: none;    /* ✅ CHANGED from translateX(-50%) */
+  position:relative;
   background:#ffd966;
   padding:10px 25px;
   border-radius:30px;
@@ -333,23 +345,22 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   color:#222;
   font-size:16px;
   text-transform:uppercase;
+  display: block;         /* ✅ CHANGED from inline-block */
+  width: fit-content;     /* ✅ ADD THIS */
+  margin: 40px auto 30px auto; /* ✅ CHANGED - added 40px top margin */
   animation: ribbonSlide 2s ease forwards;
-  z-index:10;
-  display: inline-block;  /* ✅ ADD THIS */
-  margin-bottom: 30px;    /* ✅ ADD THIS - space below ribbon */
 }
 
 @keyframes ribbonSlide{
-  0%{transform: translateY(-50px);opacity:0;}
+  0%{transform: translateY(-30px);opacity:0;}
   100%{transform: translateY(0);opacity:1;}
 }
 
 
 .about-container{max-width:1200px;margin:auto;}
+
 .about-content{display:flex;align-items:center;justify-content:space-between;gap:50px;flex-wrap:wrap;}
-
 .about-text{flex:1;}
-
 .about-text h2{font-size:42px;color:#ffd966;margin-bottom:20px;font-weight:bold;position:relative;}
 .about-text h2::after{content:"";width:60px;height:3px;background:#ffd966;display:block;margin-top:10px;border-radius:2px;}
 .about-text p{font-size:18px;line-height:1.7;color:#eee;margin-bottom:30px;}
@@ -405,35 +416,34 @@ footer{text-align:center;padding:20px;background:#222;color:white;}
 
 /* RESPONSIVE */
 
+/* RESPONSIVE */
 @media(max-width:900px){
-/* .nav-links{flex-direction:column;gap:15px;margin-top:10px;} */
-
-.about-content{flex-direction:column-reverse;gap:30px;}
-.about-text h2{font-size:32px;}
-.about-text p{font-size:16px;}
-.features{flex-direction:column;}
-.feature{flex:1 1 100%;}
-.gallery{grid-template-columns:repeat(2,1fr);gap:20px;}
-.hero h1{font-size:36px;}
-.hero p{font-size:16px;}
-/* ✅ REMOVED: .hero-logo{width:120px;} */
-.commercial-features, .residential-features, .features-grid{flex-direction:column;gap:20px;}
+  .about-content{flex-direction:column-reverse;gap:30px;}
+  .about-text h2{font-size:32px;}
+  .about-text p{font-size:16px;}
+  .features{flex-direction:column;}
+  .feature{flex:1 1 100%;}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .commercial-features, .residential-features, .features-grid{flex-direction:column;gap:20px;}
+  
+  /* ✅ Ribbon mobile fix */
+  .about-ribbon {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+  }
 }
+
 @media(max-width:500px){
-.gallery{grid-template-columns:1fr;gap:15px;}
-#location iframe{height:250px;}
-form input, form textarea, form button{width:100%;}
-/* ✅ REMOVED: .hero-logo{width:100px;} */
-.hero-title{font-size:28px;}
-.hero-subtitle{font-size:14px;}
-
+  .gallery{grid-template-columns:1fr;gap:15px;}
+  #location iframe{height:250px;}
+  form input, form textarea, form button{width:100%;}
+  .hero-title{font-size:28px;}
+  .hero-subtitle{font-size:14px;}
+  
+  /* ✅ Ribbon small mobile fix */
+  .about-ribbon {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
 }
-
-
-
-
-
-
-
-
-
