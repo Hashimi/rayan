@@ -3,15 +3,69 @@
 body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavior:smooth;}
 
 /* NAVBAR */
-.navbar{padding:8px 8%;height:60px;display:flex;align-items:center;justify-content:space-between;background:#222;position:fixed;width:100%;box-shadow:0 3px 10px rgba(0,0,0,0.5);z-index:999;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:65px;}
-.logo-text{font-weight:bold;font-size:22px;color:#d4af37;}
-.nav-links{list-style:none;display:flex;gap:30px;}
-.nav-links a{text-decoration:none;color:#eee;font-weight:500;transition:0.3s;}
-.nav-links a:hover{color:#ffd966;}
-.language-switcher{display:flex;gap:8px;align-items:center;}
-.language-switcher button{background:#d4af37;border:none;color:white;padding:5px 12px;cursor:pointer;border-radius:5px;font-weight:bold;}
+.navbar{
+padding:10px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#222;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+box-shadow:0 3px 10px rgba(0,0,0,0.5);
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:55px;
+}
+
+.logo-text{
+font-weight:bold;
+font-size:22px;
+color:#d4af37;
+}
+
+/* NAV LINKS DESKTOP */
+.nav-links{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#eee;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ffd966;
+}
+
+.language-switcher{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+.language-switcher button{
+background:#d4af37;
+border:none;
+color:white;
+padding:5px 12px;
+cursor:pointer;
+border-radius:5px;
+font-weight:bold;
+}
 
 /* HAMBURGER */
 .menu-toggle{
@@ -21,13 +75,8 @@ cursor:pointer;
 color:#ffd966;
 }
 
-/* MOBILE NAV */
+/* MOBILE NAVBAR */
 @media(max-width:900px){
-
-.navbar{
-height:auto;
-padding:12px 6%;
-}
 
 .menu-toggle{
 display:block;
@@ -42,7 +91,7 @@ background:#222;
 flex-direction:column;
 align-items:center;
 gap:20px;
-padding:20px 0;
+padding:25px 0;
 display:none;
 }
 
@@ -51,7 +100,7 @@ display:flex;
 }
 
 .logo img{
-height:45px;
+height:40px;
 }
 
 .logo-text{
@@ -63,7 +112,6 @@ margin-left:10px;
 }
 
 }
-
 
 
 /* HERO */
