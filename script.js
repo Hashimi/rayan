@@ -26,6 +26,18 @@ function updateLanguage(){
   document.documentElement.dir = currentLang==='fa'?'rtl':'ltr';
 }
 
+
+
+// MOBILE MENU
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", ()=>{
+navLinks.classList.toggle("active");
+});
+
+
+
 // LIGHTBOX
 const lightbox=document.getElementById('lightbox');
 const lightboxImg=document.querySelector('.lightbox-img');
