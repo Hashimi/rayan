@@ -206,7 +206,7 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 
 
 .hero-logo {
-  width: clamp(180px, 45vw, 480px); /* Min, Preferred, Max */
+  width: clamp(220px, 45vw, 480px); /* Min, Preferred, Max */
   max-width: 90%;
   height: auto;
   margin-bottom: clamp(12px, 3vw, 20px);
