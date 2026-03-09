@@ -213,7 +213,7 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 /* Tablet & Small Desktop (max-width: 900px) */
 @media (max-width: 900px) {
   .hero-logo {
-    width: 400px; /* Was 120px — now much more visible */
+    width: 580px; /* Was 120px — now much more visible */
     margin-bottom: 15px;
   }
   
@@ -351,6 +351,7 @@ form input, form textarea, form button{width:100%;}
 .hero-title{font-size:28px;}
 .hero-subtitle{font-size:14px;}
 }
+
 
 
 
