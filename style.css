@@ -224,7 +224,7 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
   background:rgba(0,0,0,0.35);
 }
 .hero-logo{
-  width:580px;
+  width:300px;
   margin-bottom:20px;
   filter:drop-shadow(0 5px 20px rgba(0,0,0,0.6));
   transition:transform 0.3s;
@@ -393,6 +393,7 @@ form input, form textarea, form button{width:100%;}
 .hero-title{font-size:28px;}
 .hero-subtitle{font-size:14px;}
 }
+
 
 
 
