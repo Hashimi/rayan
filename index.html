@@ -13,44 +13,44 @@
 <body>
 
 <header>
+
+
+
 <nav class="navbar">
 
+  <!-- Logo -->
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <span class="logo-text lang" data-fa="رایان تاور" data-en="Rayan Tower">رایان تاور</span>
+  </div>
 
-<!-- Inside <nav class="navbar">, after the logo div -->
-<div class="logo">
-  <img src="logo.png" alt="Logo">
-  <span class="logo-text lang" data-fa="رایان تاور" data-en="Rayan Tower">رایان تاور</span>
-</div>
+  <!-- ✅ Hamburger Button -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-<!-- ADD THIS HAMBURGER BUTTON -->
-<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+  <!-- ✅ FIXED: Single nav-links with ID AND actual links -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="lang" data-fa="خانه" data-en="Home">خانه</a></li>
+    <li><a href="#about" class="lang" data-fa="درباره ما" data-en="About">درباره ما</a></li>
+    <li><a href="#features" class="lang" data-fa="ویژگی‌ها" data-en="Features">ویژگی‌ها</a></li>
+    <li><a href="#gallery" class="lang" data-fa="گالری" data-en="Gallery">گالری</a></li>
+    <li><a href="#location" class="lang" data-fa="موقعیت" data-en="Location">موقعیت</a></li>
+    <li><a href="#contact" class="lang" data-fa="تماس" data-en="Contact">تماس</a></li>
+  </ul>
 
-<ul class="nav-links" id="navLinks">
-  <!-- existing links -->
-</ul>
-
-
-<ul class="nav-links">
-
-<li><a href="#home" class="lang" data-fa="خانه" data-en="Home">خانه</a></li>
-<li><a href="#about" class="lang" data-fa="درباره ما" data-en="About">درباره ما</a></li>
-<li><a href="#features" class="lang" data-fa="ویژگی‌ها" data-en="Features">ویژگی‌ها</a></li>
-<li><a href="#gallery" class="lang" data-fa="گالری" data-en="Gallery">گالری</a></li>
-<li><a href="#location" class="lang" data-fa="موقعیت" data-en="Location">موقعیت</a></li>
-<li><a href="#contact" class="lang" data-fa="تماس" data-en="Contact">تماس</a></li>
-
-</ul>
-
-<div class="language-switcher">
-<button id="fa-btn">FA</button>
-<button id="en-btn">EN</button>
-</div>
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <button id="fa-btn">FA</button>
+    <button id="en-btn">EN</button>
+  </div>
 
 </nav>
+
+
+
 </header>
 
 
@@ -260,5 +260,4 @@ data-en="Rayan Tower is a modern residential tower located on Shadiyan Road near
 <script src="script.js"></script>
 
 </body>
-
 </html>
