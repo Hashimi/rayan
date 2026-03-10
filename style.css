@@ -201,86 +201,101 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 
 
 /* HERO */
-.hero{height:100vh;position:relative;overflow:hidden;}
-#heroVideo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
-
-/* HERO Overlay - remove any flex gap */
-.hero-overlay{
-  position:relative;
-  z-index:1;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-  background:rgba(0,0,0,0.35);
-  gap: 0;  /* ✅ ADD THIS - ensures no flex gap */
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hero Logo - reduce margin and ensure no padding */
-.hero-logo{
-  width:480px;
-  margin-bottom:20px;  /* ✅ Reduced from 10px to 5px */
-  margin-top: 0;      /* ✅ ADD THIS */
-  padding: 0;         /* ✅ ADD THIS */
-  display: block;     /* ✅ ADD THIS - removes inline spacing */
-  filter:drop-shadow(0 5px 20px rgba(0,0,0,0.6));
-  transition:transform 0.3s;
+#heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Hero Title - remove ALL margins and reduce line-height */
-.hero-title{
-  font-size:60px;
-  margin-bottom:10px;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
-  margin-top: 0;      /* ✅ ADD THIS - overrides default h1 margin */
-  padding: 0;         /* ✅ ADD THIS */
-  line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
-  font-weight:bold;
-  color:#ffd966;
+/* HERO Overlay */
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+  gap: 0;
 }
 
-.hero-subtitle
-{
-  margin-top:20px;
-  font-size:20px;
-  margin-bottom:15px;
-  color:#fff;
-  line-height: 1.1;  
+/* Hero Logo */
+.hero-logo {
+  width: 480px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 0;
+  display: block;
+  filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s;
 }
-.btn
-{
-  background:#ffd966;
-  color:#222;
-  padding:12px 25px;
-  text-decoration:none;
-  border-radius:30px;
-  transition:0.3s;
-  font-weight:bold;
+
+/* Hero Title - INCREASED MARGIN BELOW */
+.hero-title {
+  font-size: 60px;
+  margin-bottom: 30px; /* ✅ CHANGED FROM 10px TO 30px FOR SPACING */
+  margin-top: 0;
+  padding: 0;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #ffd966;
 }
-.btn:hover{background:#e6c84d;}
 
+/* Hero Subtitle */
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 0; /* ✅ Ensures no extra space from top */
+  color: #fff;
+  line-height: 1.1;
+}
 
+.btn {
+  background: #ffd966;
+  color: #222;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: bold;
+}
 
-* Tablet (≤900px) */
+.btn:hover {
+  background: #e6c84d;
+}
+
+/* ================= RESPONSIVE HERO ================= */
+
+/* Tablet (≤900px) */
 @media (max-width: 900px) {
   .hero-logo {
     width: 300px;
-    margin-bottom: 10px;  /* ✅ Reduced */
+    margin-bottom: 10px;
     margin-top: 0;
     display: block;
   }
-  
+
   .hero-title {
     font-size: 42px;
-    margin: 0;           /* ✅ CHANGED */
+    margin: 0;
     margin-top: 0;
-    line-height: 1.1;    /* ✅ ADD THIS */
+    margin-bottom: 20px; /* ✅ Added spacing for tablet */
+    line-height: 1.1;
   }
-}
 
-  
   .hero-subtitle {
     font-size: 18px;
     padding: 0 10px;
@@ -291,25 +306,24 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 @media (max-width: 500px) {
   .hero-logo {
     width: 220px;
-    margin-bottom: 5px;  /* ✅ Reduced further for mobile */
+    margin-bottom: 5px;
     margin-top: 0;
     display: block;
   }
-  
+
   .hero-title {
     font-size: 32px;
-    margin: 0;           /* ✅ CHANGED */
+    margin: 0;
     margin-top: 0;
-    line-height: 1.1;    /* ✅ ADD THIS */
+    margin-bottom: 15px; /* ✅ Added spacing for mobile */
+    line-height: 1.1;
   }
-}
 
- 
   .hero-subtitle {
     font-size: 15px;
     padding: 0 15px;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 14px;
@@ -320,26 +334,23 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 @media (max-width: 360px) {
   .hero-logo {
     width: 180px;
-    margin-bottom: 5px;  /* ✅ Reduced */
+    margin-bottom: 5px;
     margin-top: 0;
     display: block;
   }
-  
+
   .hero-title {
     font-size: 28px;
-    margin: 0;           /* ✅ CHANGED */
+    margin: 0;
     margin-top: 0;
-    line-height: 1.1;    /* ✅ ADD THIS */
+    margin-bottom: 15px; /* ✅ Added spacing for small mobile */
+    line-height: 1.1;
   }
-}
 
-  
   .hero-subtitle {
     font-size: 14px;
   }
 }
-
-
 
 
 
@@ -463,6 +474,7 @@ footer{text-align:center;padding:20px;background:#222;color:white;}
     padding: 6px 15px;
   }
 }
+
 
 
 
