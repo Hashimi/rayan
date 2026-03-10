@@ -233,7 +233,7 @@ body{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#eee;scroll-behavi
 /* Hero Title - remove ALL margins and reduce line-height */
 .hero-title{
   font-size:60px;
-  margin: 0;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
+  margin-bottom:10px;          /* ✅ CHANGED - removes all margins (was margin-bottom:10px) */
   margin-top: 0;      /* ✅ ADD THIS - overrides default h1 margin */
   padding: 0;         /* ✅ ADD THIS */
   line-height: 1.1;   /* ✅ ADD THIS - reduces vertical space within text */
@@ -462,5 +462,6 @@ footer{text-align:center;padding:20px;background:#222;color:white;}
     padding: 6px 15px;
   }
 }
+
 
 
